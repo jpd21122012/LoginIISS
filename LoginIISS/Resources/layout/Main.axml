@@ -3,5 +3,33 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:minWidth="25px"
+    android:minHeight="25px">
+  <TextView
+          android:text="Username"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView1" />
+  <EditText
+      android:inputType="textPersonName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/etUsername" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView2"
+      android:text="Password" />
+  <EditText
+      android:inputType="textPassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/etPassword" />
+  <Button
+      android:text="Login"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btnLogin" />
 </LinearLayout>
