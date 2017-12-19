@@ -86,6 +86,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureHelper\App.cs" />
+    <Compile Include="AzureHelper\Deteccion.cs" />
+    <Compile Include="AzureHelper\Dispositivos.cs" />
+    <Compile Include="AzureHelper\Empresas.cs" />
+    <Compile Include="AzureHelper\Queries.cs" />
     <Compile Include="CameraActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="LoginHelper\Login.cs" />

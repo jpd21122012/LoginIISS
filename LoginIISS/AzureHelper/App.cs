@@ -17,5 +17,6 @@ namespace LoginIISS.AzureHelper
     {
         //we initialize the mobile service of azure o obtain the data from the easy table.
         public static MobileServiceClient MobileService = new MobileServiceClient("https://pruebjpd.azurewebsites.net");
+        public static MobileServiceClient MobileService1 = new MobileServiceClient("https://kiarasapp.azurewebsites.net");
     }
 }
