@@ -91,6 +91,7 @@
     <Compile Include="AzureHelper\Empresas.cs" />
     <Compile Include="AzureHelper\Queries.cs" />
     <Compile Include="CameraActivity.cs" />
+    <Compile Include="LoginActivity.cs" />
     <Compile Include="LoginHelper\Login.cs" />
     <Compile Include="LoginHelper\ValidateLogin.cs" />
     <Compile Include="MainActivity.cs" />
@@ -104,6 +105,9 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\Camera.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Login.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

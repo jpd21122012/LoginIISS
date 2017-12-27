@@ -38,17 +38,17 @@ namespace LoginIISS.LoginHelper
                 //In this part we do a linq query to get the correct information.
                 lista = await userTableObject.Where(userTableObj => userTableObj.User == user && userTableObj.Password == password).ToListAsync();
                 var obj = lista[0];
-                MainActivity.obj= lista[0];
+                LoginActivity.Obj= lista[0];
                 System.Diagnostics.Debug.WriteLine("Welcome back " + obj.User + " Tu id es: " + obj.IdC, " Intelligent Identificator Security System");
                 if (lista.Count == 1)
                 {
-                    MainActivity.idC = Convert.ToInt32(obj.IdC);
-                    MainActivity.isLogged= true;
+                    LoginActivity.IdC = Convert.ToInt32(obj.IdC);
+                    LoginActivity.IsLogged= true;
                 }
             }
             catch (Exception)
             {
-                MainActivity.isLogged = false;
+                LoginActivity.IsLogged = false;
             }
         }
     }

@@ -22,6 +22,7 @@ namespace LoginIISS.AzureHelper
         public List<Dispositivos> device = new List<Dispositivos>();
         public List<Empresas> company = new List<Empresas>();
         public static string FaceListId;
+        public static string Workspace;
 
         public async Task UpdateOnState()
         {
@@ -51,7 +52,7 @@ namespace LoginIISS.AzureHelper
         }
         public async Task GetDispositivosAsync()
         {
-            device = await deviceTableObject.Where(devicesTable => devicesTable.Nombre == MainActivity.myDevice).ToListAsync();
+            device = await deviceTableObject.Where(devicesTable => devicesTable.Nombre == LoginActivity.MyDevice).ToListAsync();
             deviceObj = device.First();
             await UpdateOnState();
             await GetFaceIdList();
@@ -62,7 +63,9 @@ namespace LoginIISS.AzureHelper
             {
                 company = await companyTable.Where(companyTable => companyTable.IdC == deviceObj.IdC).ToListAsync();
                 FaceListId = company.First().FaceListId;
+                Workspace = company.First().Workspace;
                 System.Diagnostics.Debug.WriteLine("FaceListId: " + FaceListId);
+                System.Diagnostics.Debug.WriteLine("Workspace: " + Workspace);
             }
             catch (Exception e)
             {
